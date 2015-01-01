@@ -6,6 +6,10 @@ Version
 -----
 Current version: 0.6 beta
 
+Demos
+-----
+* [SmartTrace Demo](http://techlaboratory.net/techlab/demos/SmartTrace/index.html)
+
 License
 -------
 [MIT License](https://github.com/techlab/SmartTrace/blob/master/LICENSE)
