@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="SmartLogger - An input trace plugin" />
+<title>SmartTrace - A browser based trace plugin</title>
+
+<!-- Smart Logger Files Include -->
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.smartTrace.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+   
+    $(document).ready(function(){
+    	// Smart Logger    	
+  		$('#traceCanvas').smartTrace();
+        
+        $('#showTrace').click(function(eventData) {
+            $('#traceCanvas').toggle();
+        });
+        $('#clearDraw').click(function(eventData) {
+            $('#traceCanvas').empty();
+        });
+        $('#replayTrace').click(function(eventData) {
+            $('#traceCanvas').empty();
+            $('#traceCanvas').smartTrace('drawTrace');
+        }); 
+        $('#clearTrace').click(function(eventData) {
+            $('#traceCanvas').smartTrace('clearTrace');
+        }); 
+	});
+</script>
+</head>
+<body>
+    <div id="traceActions" class="traceActionBar">
+        <a id="showTrace" href="#">Show/Hide Trace</a>
+        <a id="clearDraw" href="#">Clear</a>
+        <a id="stopStartTrace" href="#">Stop/Start Trace</a>
+        <a id="replayTrace" href="#">Replay Trace</a>
+        <a id="clearTrace" href="#">Clear Trace</a>
+    </div>
+    <div id="traceLogXY" class="traceBoxXY"></div>
+    <div id="traceLog" class="traceBox"></div>
+    <div id="traceCanvas" class="overlay" ></div>
+</body>
+</html>
