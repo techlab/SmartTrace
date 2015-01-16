@@ -1,6 +1,6 @@
 SmartTrace
 ==========
-A browse input trace jquery plugin
+A browser input trace jquery plugin
 
 Version
 -----
